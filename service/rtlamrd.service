@@ -1,0 +1,15 @@
+[Unit]
+Description=rtlamrd
+After=network.target rtltcpd.service
+
+[Service]
+ExecStart=/home/pi/go/bin/rtlamr -format=csv -unique=true
+WorkingDirectory=/home/pi/services
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rtlamrd
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
