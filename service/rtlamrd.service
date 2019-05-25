@@ -4,7 +4,7 @@ After=network.target rtltcpd.service
 
 [Service]
 ExecStart=/home/pi/go/bin/rtlamr -format=csv -unique=true
-WorkingDirectory=/home/pi/services
+WorkingDirectory=/home/pi/logs
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=rtlamrd
