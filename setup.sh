@@ -17,6 +17,12 @@ sudo cp ./service/rtltcpd.service /etc/systemd/system
 sudo cp ./service/rtlamrd.service /etc/systemd/system/
 sudo chmod +x /etc/systemd/system/rtltcpd.service
 sudo chmod +x /etc/systemd/system/rtlamrd.service
+sudo cp ./service/rtlamrd.conf /etc/rsyslog.d
+sudo cp ./service/rtltcpd.conf /etc/rsyslog.d
+sudo systemctl restart rsyslog
 chown -R root:adm /home/pi/logs/
 sudo chown -R root:adm /home/pi/logs/
-
+sudo systemctl start rtltcpd.service
+sudo systemctl start rtlamrd.service
+sudo systemctl enable rtltcpd.service
+sudo systemctl enable rtlamrd.service
