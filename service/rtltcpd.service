@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/local/bin/rtl_tcp
-WorkingDirectory=/home/pi/services
+WorkingDirectory=/home/pi/logs
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=rtltcpd
