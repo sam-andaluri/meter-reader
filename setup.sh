@@ -13,3 +13,10 @@ sudo apt-get install -y golang
 export GOPATH=$HOME/go
 go get github.com/bemasher/rtlamr
 export PATH=$PATH:$GOPATH/bin
+sudo cp ./service/rtltcpd.service /etc/systemd/system
+sudo cp ./service/rtlamrd.service /etc/systemd/system/
+sudo chmod +x /etc/systemd/system/rtltcpd.service
+sudo chmod +x /etc/systemd/system/rtlamrd.service
+chown -R root:adm /home/pi/logs/
+sudo chown -R root:adm /home/pi/logs/
+
