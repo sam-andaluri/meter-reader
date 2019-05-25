@@ -1,2 +1,2 @@
 # Install
-bash <(curl -L https://github.com/sam-andaluri/meter-reader/raw/master/setup.sh)
+bash <(curl -L https://raw.githubusercontent.com/sam-andaluri/meter-reader/master/setup.sh)
