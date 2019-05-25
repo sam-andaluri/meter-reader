@@ -29,6 +29,7 @@ sudo chmod +x /etc/systemd/system/rtlamrd.service
 # Setup services log output dir
 sudo mkdir -p /home/pi/logs/
 sudo chown -R root:adm /home/pi/logs/
+sudo chmod -R ugo+rwx /home/pi/logs/
 sudo curl -o /etc/rsyslog.d/rtlamrd.conf https://raw.githubusercontent.com/sam-andaluri/meter-reader/master/service/rtlamrd.conf
 sudo curl -o /etc/rsyslog.d/rtltcpd.conf https://raw.githubusercontent.com/sam-andaluri/meter-reader/master/service/rtltcpd.conf
 # Restart syslog daemon
